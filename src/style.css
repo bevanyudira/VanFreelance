@@ -1,0 +1,70 @@
+:root {
+  --bg: #eef1f6;
+  --surface: #ffffff;
+  --ink: #101b33;
+  --muted: #55627a;
+  --line: #d6dce8;
+  --a: #2f5bea;
+  --b: #0e8f83;
+  --c: #7a4de8;
+
+  /* Warna isi tombol dan kotak huruf. Sama dengan warna grup, kecuali B di mode terang
+     yang digelapkan sedikit supaya teks di atasnya memenuhi kontras AA. */
+  --a-solid: var(--a);
+  --b-solid: #0a766c;
+  --c-solid: var(--c);
+
+  /* Warna wordmark fallback. Tile selalu berlatar putih di kedua mode, jadi nilainya
+     tidak ikut berubah di mode gelap. */
+  --a-ink: #2f5bea;
+  --b-ink: #0a766c;
+  --c-ink: #7a4de8;
+
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0c1220;
+    --surface: #141c30;
+    --ink: #e8ecf5;
+    --muted: #9aa6bc;
+    --line: #26304a;
+    --a: #7b97ff;
+    --b: #3cc4b4;
+    --c: #a98fff;
+    --b-solid: var(--b);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--accent, var(--ink));
+  outline-offset: 2px;
+}
