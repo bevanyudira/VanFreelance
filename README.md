@@ -1,6 +1,6 @@
 # Portal freelance
 
-Halaman satu layar untuk mencari proyek freelance. Isinya tautan ke tujuh platform dalam tiga kelompok: cari proyek dari klien, tawarkan jasa, dan Web3. Klik logo platform, dan halaman masuknya terbuka di tab baru. Dibuat dengan Vue 3, TypeScript, dan Vite, tanpa backend dan tanpa penyimpanan data. Hasil build berupa situs statis.
+Halaman satu layar untuk mencari proyek freelance. Isinya tautan ke sembilan platform dalam tiga kelompok: cari proyek dari klien, tawarkan jasa, dan Web3. Klik logo platform, dan halaman masuknya terbuka di tab baru. Dibuat dengan Vue 3, TypeScript, dan Vite, tanpa backend dan tanpa penyimpanan data. Hasil build berupa situs statis.
 
 ## Menjalankan di komputer
 
@@ -55,6 +55,8 @@ Asumsi yang diambil saat membangun:
 - **Logo Fiverr hanya ikon.** Halaman brand dan beranda Fiverr memblokir permintaan otomatis (403). Yang berhasil diambil adalah `apple-touch-icon.png` resmi dari fiverr.com, jadi tile Fiverr menampilkan ikon "fi" tanpa tulisan. Kalau mau logo lengkap, ganti `public/logos/fiverr.png` dengan file dari halaman brand Fiverr.
 - **Logo Upwork dan Guru hitam.** Keduanya diambil apa adanya dari situs resmi (Upwork: `upwork-logo.svg`, Guru: SVG di header). Situs itu sendiri menampilkannya hitam. Upwork juga punya versi hijau, kalau mau pakai versi itu ganti filenya.
 - **Logo Superteam Earn** diambil dari header halaman Earn (`superteam.fun/assets/logo.svg`).
+- **Logo LaborX dan CryptoTask** diambil dari header situs masing-masing (`laborx.com/static/images/common/logo-blue.svg` dan `cryptotask.org/_nuxt/img/CT-horizontalni_boja.*.svg`), karena tidak ditemukan halaman brand atau press kit.
+- **Alamat beranda CryptoTask** (`cryptotask.org`) diteruskan situs ke `www.cryptotask.org/en`. Alamat dari data dipertahankan.
 - **Alamat beranda Superteam Earn** (`earn.superteam.fun`) diteruskan situs ke `superteam.fun/earn/`. Alamat dari data dipertahankan.
 - **Warna tombol dan kotak huruf grup B (mode terang)** memakai `#0a766c`, bukan `#0e8f83`. Dengan warna aslinya, teks tombol hanya mencapai kontras 3,5:1, di bawah batas AA 4,5:1. Di mode gelap warnanya tidak diubah.
 - **Warna wordmark fallback** memakai nilai warna mode terang di kedua mode (`--a-ink`, `--b-ink`, `--c-ink` di `src/style.css`). Alasannya, tile selalu berlatar putih, dan warna aksen mode gelap yang terang akan sulit dibaca di atasnya.
@@ -71,4 +73,6 @@ Status alamat login:
 | Upwork | `https://www.upwork.com/ab/account-security/login` | Terverifikasi |
 | Fastwork | `https://fastwork.id` | Belum terverifikasi: tidak ada halaman login terpisah, tombol "Masuk" memulai alur OAuth |
 | Fiverr | `https://www.fiverr.com/login` | Belum terverifikasi: situs memblokir permintaan otomatis (403) |
+| LaborX | `https://laborx.com` | Terverifikasi: login berupa pop-up di beranda (dikonfirmasi dari kode situs), tanpa halaman terpisah |
+| CryptoTask | `https://www.cryptotask.org/en/login` | Terverifikasi: tautan "Login" di header beranda, status 200 |
 | Superteam Earn | `https://earn.superteam.fun` | Belum terverifikasi: login diduga berupa pop-up di beranda |

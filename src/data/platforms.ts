@@ -106,6 +106,30 @@ export const platforms: Platform[] = [
     note: 'Pasar global, fee sekitar 20%.',
     wordmark: { main: 'fiverr', layout: 'inline' },
   },
+  // login: terverifikasi (login berupa jendela pop-up di beranda tanpa halaman terpisah,
+  // dikonfirmasi dari kode situs: modal login dengan Metamask, Google, atau email)
+  {
+    id: 'laborx',
+    name: 'LaborX',
+    group: 'C',
+    url: 'https://laborx.com',
+    loginUrl: 'https://laborx.com',
+    logo: 'logos/laborx.svg',
+    note: 'Mirip Upwork versi Web3, pembayaran lewat escrow, butuh wallet.',
+    wordmark: { main: 'labor', sub: 'x', layout: 'inline' },
+  },
+  // login: terverifikasi (tautan "Login" di header beranda, status 200)
+  // Alamat beranda cryptotask.org diteruskan situs ke https://www.cryptotask.org/en.
+  {
+    id: 'cryptotask',
+    name: 'CryptoTask',
+    group: 'C',
+    url: 'https://cryptotask.org',
+    loginUrl: 'https://www.cryptotask.org/en/login',
+    logo: 'logos/cryptotask.svg',
+    note: 'Marketplace jasa dengan escrow smart contract, cocok untuk jasa digital umum.',
+    wordmark: { main: 'crypto', sub: 'task', layout: 'stacked' },
+  },
   // login: belum terverifikasi, cek manual
   // Beranda tidak punya tautan login. Situs memakai jendela pop-up login (Privy), jadi dipakai
   // alamat beranda. Alamat ini diteruskan ke https://superteam.fun/earn/.
